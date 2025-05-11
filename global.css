@@ -1,0 +1,27 @@
+*,
+::before,
+::after { 
+	box-sizing: border-box;
+	border-width: 0;
+	border-style: solid;
+	border-color: #b1bed1;
+	font-size: 0.9rem; 
+	margin: 0;
+	padding: 0;
+	font-family: "Raleway", serif;
+	font-optical-sizing: auto;
+	font-weight: 400;
+	font-style: normal;
+	margin: 0; 
+    padding: 0; 
+}
+
+/* Variables de colores y Temas*/
+:root {
+	color-scheme: light dark;
+	--bg-color: light-dark(#EEEEEE, #000000);
+	--primary-color: light-dark(#97a9b4, #424d53);
+	--secundary-color: light-dark(#7892a3, #1617186e);
+	--text-color: light-dark(#000000, #DDDDDD);
+	--second-text-color: light-dark(#666f75, #aaaaaa);
+}
