@@ -20,8 +20,8 @@
 :root {
 	color-scheme: light dark;
 	--bg-color: light-dark(#EEEEEE, #000000);
-	--primary-color: light-dark(#97a9b4, #424d53);
-	--secundary-color: light-dark(#7892a3, #1617186e);
+	--primary-color: light-dark(#5198db, #295d79);
+	--secundary-color: light-dark(#76acdf, #2862818c);
 	--text-color: light-dark(#000000, #DDDDDD);
-	--second-text-color: light-dark(#666f75, #aaaaaa);
+	--second-text-color: light-dark(#666f75, #a6c1cf);
 }

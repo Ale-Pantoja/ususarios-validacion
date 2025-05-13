@@ -2,16 +2,23 @@ body {
     background-color: var(--bg-color);
 }
 
+#form-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 #form {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: var(--secundary-color);
+    border-radius: 1rem;
+    box-shadow: 0 0 10px #295d7980;
+    width: 70%;
     padding: 1rem;
     margin: 1rem;
-    background-color: var(--secundary-color);
-    outline: 2px solid var(--primary-color);
-    border-radius: 1rem;
 }
 
 #form-email-input {
@@ -39,6 +46,7 @@ body {
 }
 
 #email-input {
+    background-color: var(--bg-color);
     padding: 0.5rem;
     margin: 0.2rem;
     border-radius: 1rem;
@@ -48,6 +56,7 @@ body {
 
 ::placeholder {
     color: var(--second-text-color);
+    background-color: var(--bg-color);
 }
 
 #button {
@@ -55,9 +64,10 @@ body {
     margin: 0.5rem;
     border-radius: 1rem;
     background-color: var(--primary-color);
+    box-shadow: 0 0 10px rgba(94, 99, 107, 0.13);
     font-weight: 500;
     width: fit-content;
-    transition: all 0.4s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
 
 #button:hover {
@@ -76,13 +86,12 @@ ul {
 li {
     background-color: var(--primary-color);
     border-radius: 1rem;
-    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
     color: var(--text-color);
     padding: 1rem;
     margin: 0.3rem;
     list-style: none;
     width: fit-content;
-    transition: all 0.8s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
 
 li:hover {
@@ -147,8 +156,5 @@ li:hover {
 
   li {
     width: auto; 
-    min-width: 200px; 
-    flex: 1 1 calc(50% - 1rem);
-    margin: 0;
   }
 }
