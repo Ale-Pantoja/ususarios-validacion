@@ -18,15 +18,6 @@ const oldUsers = [
   },
 ];
 
-// limpiar listado
-ul.innerHTML = '';
-
-// Funcion que devuelve fecha en formato DD-MMM-AAAA
-function getDateCreated() {
-  const fecha = new Date();
-  return fecha.toLocaleDateString().split("/").join("-");
-}
-
 // funcion que deshabilita el boton de crear si el input esta vacio
 const renderFormBtnValidation = () => {
   if (input.value.length > 0) {
@@ -40,9 +31,19 @@ input.addEventListener('input', e => {
    renderFormBtnValidation();
 });
 
+// limpiar listado
+ul.innerHTML = '';
+
+// Funcion que devuelve fecha en formato DD-MMM-AAAA
+function getDateCreated() {
+  const fecha = new Date();
+  return fecha.toLocaleDateString().split("/").join("-");
+}
+
 // Validacion de usuarios
 // Reviso si existen usuarios con el mismo email
 input.addEventListener('input', e => {
+    e.preventDefault();
   const similarEmails = oldUsers.filter(element =>
     element.email.toLowerCase().startsWith(input.value.toLowerCase())
   );
@@ -56,6 +57,7 @@ input.addEventListener('input', e => {
         <p id="error-text">¡Este correo ya está registrado!</p>
       </div>
     `;
+    formBtn.disabled = true;
   } else if (input.value === '') {
     ul.innerHTML = `
       <div id="error-div">
